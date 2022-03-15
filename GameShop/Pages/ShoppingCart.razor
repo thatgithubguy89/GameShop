@@ -1,0 +1,41 @@
+﻿@page "/shoppingcart"
+
+@if(shoppingCartItems == null)
+{
+    <p>Loading items...</p>
+}
+else
+{
+<AuthorizeView>
+        <Authorized>
+<table class="table table-hover mt-5">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+  <tbody>
+      @foreach (var item in shoppingCartItems)
+      {
+          <tr class="table-dark">
+      <td>@item.Title</td>
+      <td>@item.Amount</td>
+      <td>@item.Price
+      <button @onclick="@(()=>DeleteItem(item.Title))">-</button>
+      </td>
+    </tr>
+      }
+      <tr>
+          <td></td>
+          <td>Total:</td>
+          <td>@total</td>
+      </tr>
+  </tbody>
+</table>
+<button class="btn btn-danger" @onclick="ClearCart">Clear</button>
+<NavLink class="btn btn-primary w-25 float-end">Checkout</NavLink>
+</Authorized>
+</AuthorizeView>
+}

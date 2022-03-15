@@ -1,0 +1,21 @@
+﻿@page "/"
+
+@if (games == null)
+{
+    <p>Loading games...</p>
+}
+else
+{
+    <div class="row mt-5 container">
+        @foreach (var game in games)
+        {
+            <div class="card text-white bg-primary mb-3 me-5 col-4" style="max-width: 20rem;cursor:pointer;" @onclick="@(()=>_navManager.NavigateTo($"/gamedetails/{game.Id}"))">
+                <div class="card-header">@game.Title</div>
+                <div class="card-body">
+                    <div class="card-title"><img src="@(@"\images\"+@game.ImagePath)" style="width:100%;height:200px;" /></div>
+                    <p class="card-text">@game.Description</p>
+                </div>
+            </div>
+        }
+    </div>
+}

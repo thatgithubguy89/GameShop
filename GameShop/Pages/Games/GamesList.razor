@@ -1,0 +1,39 @@
+﻿@page "/gameslist"
+
+@if (games == null)
+{
+    <p>Loading games...</p>
+}
+else
+{
+    <AuthorizeView>
+        <Authorized>
+            <div class="row mt-5 container">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var game in games)
+                        {
+                            <tr class="table-dark">
+                                <td>@game.Id</td>
+                                <td>@game.Title</td>
+                                <td>
+                                    <div>
+                                        <NavLink class="btn btn-primary w-25" href="@($"/updategame/{game.Id}")">Edit</NavLink>
+                                        <NavLink class="btn btn-danger w-25" href="@($"/deletegame/{game.Id}")">Delete</NavLink>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </Authorized>
+    </AuthorizeView>
+}

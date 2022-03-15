@@ -1,0 +1,28 @@
+﻿@page "/creategame"
+
+<AuthorizeView Context="authcon">
+    <Authorized>
+        <EditForm Model="@game" OnValidSubmit="AddGame" Context="formcon">
+            <DataAnnotationsValidator />
+            <div class="container w-50 mt-5">
+                <div class="form-group row mb-3">
+                    <InputText @bind-Value="@game.Title" type="text" class="form-control" />
+                    <ValidationMessage For="()=>game.Title" />
+                </div>
+                <div class="form-group row mb-3">
+                    <InputText @bind-Value="@game.TrailerLink" type="text" class="form-control" />
+                    <ValidationMessage For="()=>game.TrailerLink" />
+                </div>
+                <div class="form-group row mb-3">
+                    <InputTextArea @bind-Value="@game.Description" type="text" class="form-control" />
+                    <ValidationMessage For="()=>game.Description" />
+                </div>
+                <InputFile OnChange="AddImageToGame" />
+                <div class="form-group row mb-3 mt-3">
+                    <input class="btn btn-primary me-3 w-25" type="submit" value="Add" />
+                    <input class="btn btn-success w-25" value="Back" @onclick="DeleteImageFromGame" />
+                </div>
+            </div>
+        </EditForm>
+    </Authorized>
+</AuthorizeView>

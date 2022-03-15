@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameShop", "GameShop\GameShop.csproj", "{AD63BC59-0056-48E2-A78A-E470BABCE99E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A07CE250-91A3-4096-BC1D-303D0B27741F}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameShop.Test", "GameShop.Test\GameShop.Test.csproj", "{1329F667-FF18-4F54-84A3-556A41F97AFB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD63BC59-0056-48E2-A78A-E470BABCE99E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD63BC59-0056-48E2-A78A-E470BABCE99E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD63BC59-0056-48E2-A78A-E470BABCE99E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD63BC59-0056-48E2-A78A-E470BABCE99E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1329F667-FF18-4F54-84A3-556A41F97AFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1329F667-FF18-4F54-84A3-556A41F97AFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1329F667-FF18-4F54-84A3-556A41F97AFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1329F667-FF18-4F54-84A3-556A41F97AFB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AAEB0E24-F617-4D38-AA1D-8A8214479F7C}
+	EndGlobalSection
+EndGlobal
